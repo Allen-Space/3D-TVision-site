@@ -118,3 +118,34 @@ footer.site {
   font-size: 14px;
 }
 footer.site a { color: var(--dim); }
+
+/* 3D Effects page: one card per effect. */
+.effect {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) 1fr;
+  gap: 18px;
+  align-items: start;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 14px 0;
+}
+.effect img { width: 100%; height: auto; border-radius: 8px; display: block; }
+.effect h3 { margin: 2px 0 6px; font-size: 19px; }
+.effect p { margin: 0 0 10px; }
+.effect .variants { color: var(--dim); font-size: 14px; }
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+@media (max-width: 620px) {
+  .effect { grid-template-columns: 1fr; }
+}
