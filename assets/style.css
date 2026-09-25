@@ -1,0 +1,120 @@
+/* 3D-TVision site. Same palette as the app: its dark background and cyan accent. */
+:root {
+  --bg: #0d1117;
+  --panel: #151b24;
+  --line: #243041;
+  --text: #e6edf3;
+  --dim: #9aa7b3;
+  --accent: #4dc7eb;
+  --warn: #e8b64c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+a { color: var(--accent); }
+a:hover { color: #fff; }
+
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px; }
+
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: rgba(13, 17, 23, 0.92);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 56px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.brand img { width: 28px; height: 28px; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { color: var(--dim); text-decoration: none; font-size: 15px; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text); }
+
+main { padding: 40px 0 56px; }
+
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 22px; margin: 40px 0 10px; color: var(--accent); }
+h3 { font-size: 17px; margin: 24px 0 6px; }
+p, li { color: var(--text); }
+.lead { font-size: 19px; color: var(--dim); margin: 0 0 24px; }
+.dim { color: var(--dim); }
+.note { color: var(--dim); font-size: 14px; }
+
+.hero { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.hero img { width: 112px; height: 112px; }
+.hero > div { flex: 1 1 320px; }
+
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.button.disabled { border-color: var(--line); color: var(--dim); cursor: default; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.card h3 { margin: 0 0 4px; font-size: 16px; }
+.card p { margin: 0; color: var(--dim); font-size: 15px; }
+
+ol.steps li { margin: 6px 0; }
+kbd {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0 5px;
+  font-size: 14px;
+}
+
+.effects {
+  columns: 3 180px;
+  column-gap: 24px;
+  padding-left: 18px;
+  margin: 12px 0;
+}
+.effects li { break-inside: avoid; }
+.native { color: var(--warn); font-size: 13px; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 20px 0 32px;
+  color: var(--dim);
+  font-size: 14px;
+}
+footer.site a { color: var(--dim); }
